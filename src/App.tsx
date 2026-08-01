@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
+import { Analytics } from "@vercel/analytics/react";
 import { CRMProvider } from "@/context/CRMContext";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
@@ -54,6 +55,7 @@ const App = () => (
           <WhatsAppButton />
           <LiveTrafficWidget />
         </BrowserRouter>
+        <Analytics />
       </CRMProvider>
     </TooltipProvider>
   </QueryClientProvider>
